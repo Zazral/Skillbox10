@@ -231,7 +231,7 @@ namespace Skillbox10
         /// <param name="e"></param>
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (BoxAdd4.Text != "")
+            if (BoxAdd1.Text != "" && BoxAdd2.Text != "" && BoxAdd3.Text != "" && BoxAdd4.Text != "" && BoxAdd5.Text != "")
             {
                 Manager accAdd = new Manager(accounts.Count, BoxAdd1.Text, BoxAdd2.Text, BoxAdd3.Text, BoxAdd4.Text, BoxAdd5.Text);
                 accounts.Add(accAdd);
@@ -243,8 +243,14 @@ namespace Skillbox10
                 BoxAdd4.Clear();
                 BoxAdd5.Clear();
             }
-            else MessageBox.Show("Введите данные телефона");
+            else MessageBox.Show("Не все данные заполнены");
             
+        }
+
+        private void ButtonSort_Click(object sender, RoutedEventArgs e)
+        {
+            accounts.Sort();
+            ListView.Items.Refresh();
         }
     }
 }

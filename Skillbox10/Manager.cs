@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Skillbox10
 {
-    public class Manager : Account, IChange<Manager>
+    public class Manager : Account, IChange<Manager>, IComparable<Manager>
     {
         public Manager() { }
         public Manager(int id, string lastName, string firstName, string patronymic, string phoneNumber, string passport) : base(id, lastName, firstName, patronymic, phoneNumber, passport)
@@ -100,6 +100,11 @@ namespace Skillbox10
             selectedAcc.TimeDataChange = DateTime.Now;
             selectedAcc.WhoChange = "Manager";
             return selectedAcc;
+        }
+        public int CompareTo(Manager other)
+        {
+            if (other == null) return 1;
+            return this.LastName.CompareTo(other.LastName);
         }
     }
 }

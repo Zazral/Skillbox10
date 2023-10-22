@@ -56,5 +56,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="181,26,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Измененные данные" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="429,29,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Тип изменения" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,29,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Кто изменил" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="ButtonSort" Content="Сортировать" HorizontalAlignment="Left" Margin="544,139,0,0" VerticalAlignment="Top" Click="ButtonSort_Click" Grid.RowSpan="2" Grid.Row="1" Width="83"/>
     </Grid>
 </Window>
